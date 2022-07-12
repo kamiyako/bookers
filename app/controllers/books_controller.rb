@@ -9,7 +9,7 @@ class BooksController < ApplicationController
 
   def index
     @book = Book.new
-    @books=Book.all
+    @books = Book.all
   end
 
   def show
@@ -18,6 +18,9 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])  
+    # if @book.save
+    #   flash[:notice] = '更新しました' 
+    # end
   end
   
   def update
